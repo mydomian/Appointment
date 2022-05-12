@@ -4,7 +4,7 @@
 
         <!-- banner-section start -->
         <section class="inner-banner-section bg-overlay-white banner-section bg_img"
-            data-background="https://script.viserlab.com/docrib/assets/images/frontend/breadcrumb/5fd078f78945f1607497975.jpg">
+            data-background="{{ asset('assets/images/banner2.jpg') }}">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -74,7 +74,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 mrb-30">
                             <div class="booking-item">
                                 <div class="booking-thumb">
-                                    <img src="{{ asset('assets/images/doctorDemo.jpg') }}"
+                                    <img src="{{ asset('images/mentor/photos/'.$list->image) }}"
                                         alt="booking">
                                     <div class="doc-deg">{{$list->category}}</div>
                                     <a href="#0" class="fav-btn"><i class="far fa-bookmark"></i></a>

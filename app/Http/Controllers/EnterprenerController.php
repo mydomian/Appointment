@@ -21,7 +21,7 @@ class EnterprenerController extends Controller
     {
         $category_list = DB::table('mentors')->select('category')->groupBy('category')->get();
         $mentor_list = Mentor::orderBy('id','DESC')->take(50)->get();
-
+        
         return view('enterprener.mentor_list',[
             'mentor_list' => $mentor_list,
             'category_list' => $category_list,
