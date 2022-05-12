@@ -15,13 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','IndexController@home');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('user/mentor/list','EnterprenerController@index')->name('book.mentor.list');
+Route::get('user/mentor/{id}','EnterprenerController@showDoctor');
+
+// Enterprener
+Route::prefix('/user')->group(function(){
+    Route::group(['middleware'=>['auth']],function(){
+        Route::post('appointment','AppointmentController@store')->name('appointment');
+        Route::get('profile/{id}','EnterprenerController@profile')->name('user.profile');
+        Route::post('payment','EnterprenerController@Payment');
+    });
+});
+
 
 //admin
 Route::prefix('/admin')->namespace('Admin')->group(function(){
