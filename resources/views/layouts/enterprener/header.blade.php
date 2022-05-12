@@ -4,8 +4,10 @@
             <div class="container-fluid">
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-lg p-0">
-                        <a class="site-logo site-title" href="{{url('/')}}"><img
-                                src="{{ asset('assets/images/logo.png') }}" alt="site-logo"></a>
+                        <a class="site-logo site-title" href="{{url('/')}}">
+                            {{-- <img src="{{ asset('assets/images/logo.png') }}" alt="site-logo"> --}}
+                            StartUp Clinic
+                        </a>
                         <div class="language-select d-block d-lg-none ml-auto">
                             <select class="nice-select langSel language-select">
                                 <option value="en" selected>English</option>
@@ -23,9 +25,9 @@
                                 <li class="@if(Request::url() === url('/')) active @endif"><a
                                         href="{{url('/')}}">Home</a></li>
                                 <li class="@if(Request::url() === route('book.mentor.list')) active @endif"><a
-                                        href="{{ route('book.mentor.list') }}">Doctors</a></li>
-                                <li class=""><a href="#Blog">Blog</a></li>
-                                <li class=""><a href="#Contact">Contact</a></li>
+                                        href="{{ route('book.mentor.list') }}">Mentors</a></li>
+                                {{-- <li class=""><a href="#Blog">Blog</a></li>
+                                <li class=""><a href="#Contact">Contact</a></li> --}}
                             </ul>
                             <div class="language-select d-none d-lg-block">
                                 <select class="nice-select langSel language-select">
@@ -35,7 +37,7 @@
                                 </select>
                             </div>
                             <div class="header-bottom-action">
-                                <a href="#Book" class="cmn-btn">Book Now</a>
+                                <a href="{{ route('book.mentor.list') }}" class="cmn-btn">Appointment</a>
                             </div>
 
                             @guest

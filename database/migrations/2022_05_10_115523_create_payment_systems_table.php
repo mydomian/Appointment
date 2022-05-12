@@ -16,6 +16,7 @@ class CreatePaymentSystemsTable extends Migration
         Schema::create('payment_systems', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->bigInteger('user_id');
+            $table->bigInteger('mentor_id');
             $table->tinyInteger('type');
             $table->string('account_no');
             $table->text('detals');
