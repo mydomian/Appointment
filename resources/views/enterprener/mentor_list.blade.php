@@ -9,13 +9,13 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="banner-content">
-                            <h2 class="title">Our Doctors</h2>
+                            <h2 class="title">Our Mentors</h2>
                             <div class="breadcrumb-area">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="https://script.viserlab.com/docrib">Home</a>
+                                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a>
                                         </li>
-                                        <li class="breadcrumb-item active" aria-current="page">Our Doctors</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Our Mentors</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -34,7 +34,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-12 text-center">
                             <div class="appoint-content">
-                                <form class="appoint-form mt-0 ml-b-20"
+                                {{-- <form class="appoint-form mt-0 ml-b-20"
                                     action="#" method="get">
                                     <input type="hidden" name="_token" value="8ukAIkzAblPKHWeFleQaZmEKzBYgrU7bcvLdSXCC">
 
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="search-btn cmn-btn"><i class="icon-search"></i></button>
-                                </form>
+                                </form> --}}
                             </div>
                         </div>
                     </div>
