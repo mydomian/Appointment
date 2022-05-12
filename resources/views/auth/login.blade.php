@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docrib - Login</title>
+    <title>StartUp Clinic - Login</title>
     <!-- site favicon -->
     <link rel="shortcut icon" type="image/png" href="https://script.viserlab.com/docrib/assets/images/logoIcon/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
@@ -58,9 +58,11 @@
     <div class="form-area bg_img" data-background="https://script.viserlab.com/docrib/assets/staff/images/1.jpg">
         <div class="form-wrapper">
             <a href="{{url('/')}}">
-                <img src="{{asset('assets/images/logo.png')}}" alt="" srcset=""></a>
+                {{-- <img src="{{asset('assets/images/logo.png')}}" alt="" srcset=""> --}}
+                StartUp Clinic
+            </a>
                 <br>
-            <h4 class="logo-text mb-15">Welcome to <strong>Docrib</strong></h4>
+            <h4 class="logo-text mb-15">Welcome to <strong>StartUp Clinic</strong></h4>
             <p>Login to Dashboard</p>
             <form method="POST" action="{{ route('login') }}" class="cmn-form mt-30 route">
                 @csrf
