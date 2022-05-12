@@ -38,7 +38,6 @@
                       <th class="text-center">Email</th>
                       <th class="text-center">Phone</th>
                       <th class="text-center">Address</th>
-                      <th class="text-center">Image</th>
                       <th class="text-center">Is Paid</th>
                       <th class="text-center">Action</th>
                     </tr>
@@ -55,7 +54,6 @@
                         <td class="text-center">{{ $row['user']['email'] ?? ""}}</td>
                         <td class="text-center">{{ $row['user']['phone'] ?? ""}}</td>
                         <td class="text-center">{{ $row['user']['address'] ?? ""}}</td>
-                        <td class="text-center">{{ $row['user']['image'] ?? ""}}</td>
                         @if($row['is_paid'] == 1)
                         <td class="text-center">Paid</td>
                         @else

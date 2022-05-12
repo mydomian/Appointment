@@ -89,6 +89,7 @@ class MentorController extends Controller
     public function AppointLists(){
         $mentor_id = Auth::guard('mentor')->user()->id;
         $appoints = Appointment::with('user')->latest()->where('mentor_id',$mentor_id)->get();
+        // return $appoints;
         return view('mentor.appointment_lists',compact('appoints'));
     }
 

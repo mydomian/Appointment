@@ -13,6 +13,6 @@ class Appointment extends Model
     protected $appends = ['image_path'];
 
     public function getImagePathAttribute(){
-        return asset('images/mentor/photos/'.$this->document);
+        return asset('assets/document/appointment/'.$this->document);
     }
 }
