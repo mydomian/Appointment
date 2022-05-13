@@ -35,14 +35,23 @@ Route::prefix('/user')->group(function(){
 });
 
 
+
 //admin
 Route::prefix('/admin')->namespace('Admin')->group(function(){
 
     Route::match(['get','post'],'/','AdminController@Login');
+    Route::match(['get','post'],'/logout','AdminController@Logout');
+
     Route::group(['middleware'=>['admin']],function(){
         Route::get('dashboard','AdminController@Dashboard');
-    });
+        Route::get('mentorsList','AdminController@mentorList')->name('admin.mentorList');
+        Route::get('/accept-status/{id}','AdminController@acceptStatus')->name('admin.acceptStatus');
+        Route::get('/reject-status/{id}','AdminController@rejectStatus')->name('admin.rejectStatus');
 
+        Route::get('userList','AdminController@userList')->name('admin.userList');
+        Route::get('/enable-status/{id}','AdminController@enableStatus')->name('admin.enableStatus');
+        Route::get('/disable-status/{id}','AdminController@disableStatus')->name('admin.disableStatus');
+    });
 });
 
 //mentor

@@ -19,7 +19,7 @@ class CreateMentorsTable extends Migration
             $table->string('email');
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->tinyInteger('status')->nullable();
+            $table->tinyInteger('status')->default(2);
             $table->string('category')->nullable();
             $table->string('spacialist')->nullable();
             $table->string('expirenced')->nullable();
