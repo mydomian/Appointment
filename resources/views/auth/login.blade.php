@@ -107,8 +107,10 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="submit-btn mt-25 b-radius--capsule">Login <i
-                            class="las la-sign-in-alt"></i></button>
+                        class="las la-sign-in-alt"></i></button>
                 </div>
+
+                <a href="{{ url('register') }}" class="text-center btn -btn-md btn-info">Register as a Entrepreneur</a>
             </form>
         </div>
     </div><!-- login-area end -->

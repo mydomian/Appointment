@@ -20,6 +20,7 @@ Route::get('/','IndexController@home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/aboutUs', 'IndexController@AboutUs')->name('about');
 
 
 Route::get('user/mentor/list','EnterprenerController@index')->name('book.mentor.list');
@@ -51,6 +52,12 @@ Route::prefix('/admin')->namespace('Admin')->group(function(){
         Route::get('userList','AdminController@userList')->name('admin.userList');
         Route::get('/enable-status/{id}','AdminController@enableStatus')->name('admin.enableStatus');
         Route::get('/disable-status/{id}','AdminController@disableStatus')->name('admin.disableStatus');
+
+
+        Route::get('category','CategoryController@index')->name('category.list');
+        Route::post('category/store','CategoryController@store');
+        Route::get('category/{id}/edit','CategoryController@edit');
+        Route::get('category/{id}/delete','CategoryController@destroy');
     });
 });
 
@@ -60,6 +67,7 @@ Route::prefix('/mentor')->namespace('Mentor')->group(function(){
     Route::match(['get','post'],'/','MentorController@Login');
     Route::get('registration','MentorController@Registration');
     Route::post('registration-store','MentorController@RegistrationStore');
+    Route::post('/getupazila','MentorController@getThana');
 
     Route::group(['middleware'=>['mentor']],function(){
         Route::get('dashboard','MentorController@Dashboard');

@@ -26,27 +26,27 @@
                                         href="{{url('/')}}">Home</a></li>
                                 <li class="@if(Request::url() === route('book.mentor.list')) active @endif"><a
                                         href="{{ route('book.mentor.list') }}">Mentors</a></li>
-                                {{-- <li class=""><a href="#Blog">Blog</a></li>
-                                <li class=""><a href="#Contact">Contact</a></li> --}}
+                                <li class=""><a href="{{route('about')}}">About Us</a></li>
+                                <li class=""><a href="#Contact-US">Contact US</a></li>
                             </ul>
-                            <div class="language-select d-none d-lg-block">
+                            {{-- <div class="language-select d-none d-lg-block">
                                 <select class="nice-select langSel language-select">
                                     <option value="en" selected>English</option>
                                     <option value="bn">Bangla</option>
                                     <option value="hn">Hindi</option>
                                 </select>
-                            </div>
+                            </div> --}}
                             <div class="header-bottom-action">
-                                <a href="{{ route('book.mentor.list') }}" class="cmn-btn">Appointment</a>
+                                <a href="{{ url('mentor') }}" class="cmn-btn">Mentor Login</a>
                             </div>
 
                             @guest
                             <div class="header-bottom-action">
                                 <a href="{{url('login')}}" class="cmn-btn">Login Now</a>
                             </div>
-                            <div class="header-bottom-action">
+                            {{-- <div class="header-bottom-action">
                                 <a href="{{url('register')}}" class="cmn-btn">Register Now</a>
-                            </div>
+                            </div> --}}
                             @else
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle cmn-btn" type="button"

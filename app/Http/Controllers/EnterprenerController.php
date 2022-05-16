@@ -7,6 +7,7 @@ use App\Mentor;
 use App\User;
 use App\Appointment;
 use App\PaymentSystem;
+use App\Category;
 use Carbon\Carbon;
 use Auth;
 use DB;
@@ -19,9 +20,10 @@ class EnterprenerController extends Controller
      */
     public function index()
     {
-        $category_list = DB::table('mentors')->select('category')->groupBy('category')->get();
+        // $category_list = DB::table('mentors')->select('category')->groupBy('category')->get();
+        $category_list = Category::all();
         $mentor_list = Mentor::orderBy('id','DESC')->take(50)->get();
-        
+
         return view('enterprener.mentor_list',[
             'mentor_list' => $mentor_list,
             'category_list' => $category_list,

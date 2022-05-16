@@ -3,7 +3,7 @@
 
 <!-- banner-section start -->
 <section class="banner">
-    <div class="banner-social-area">
+    {{-- <div class="banner-social-area">
         <span>Follow Us</span>
         <ul class="banner-social">
             <li><a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
@@ -13,11 +13,11 @@
             <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
         </ul>
-    </div>
+    </div> --}}
     <div class="banner-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="banner-section bg-overlay-white bg_img"
+                <div class="banner-section bg_img"
                     data-background="{{ asset('assets/images/demo_banner.jpg') }}">
                     <div class="custom-container">
                         <div class="row justify-content-center align-items-center">
@@ -36,17 +36,17 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
+            {{-- <div class="swiper-slide">
                 <div class="banner-section bg-overlay-white bg_img"
                     data-background="{{ asset('assets/images/banner2.jpg') }}">
                     <div class="custom-container">
                         <div class="row justify-content-center align-items-center">
                             <div class="col-xl-6 text-center">
-                                <div class="banner-content">
+                                <div class="banner-content"> --}}
                                     {{-- <h2 class="title">World Class Care Right Where You Need It</h2>
                                     <p>Yes! you are in the right place, We deliver a world-class health service with the
                                         help of world-class doctors.</p> --}}
-                                    <div class="banner-btn">
+                                    {{-- <div class="banner-btn">
                                         <a href="{{ route('book.mentor.list') }}" class="cmn-btn">Make
                                             Appointment</a>
                                     </div>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -63,157 +63,27 @@
 
 <!-- banner-section end -->
 <!-- choose-section start -->
-{{-- <section class="choose-section ptb-80">
+<section class="choose-section ptb-80">
     <div class="container">
         <div class="row justify-content-center align-items-center ml-b-30">
-            <div class="col-lg-4 mrb-30">
+            <div class="col-lg-6 mrb-30">
+                <img src="{{ asset('assets/images/startup_logo.png') }}" alt="">
+            </div>
+            <div class="col-lg-6 mrb-30">
                 <div class="choose-left-content">
-                    <h2 class="title">Why Patients Choose Us ?</h2>
-                    <p>Docrib is a globally recognized market leader in healthcare, with leading medical professionals
-                        represented across each medical specialty. Docrib delivers, enables, and empowers care services
+                    <h2 class="title">What is StartUp Clinic?</h2>
+                    <p>StartUp Clinic is a globally recognized market leader in Business, with leading business professionals
+                        represented across each business specialty. StartUp Clinic delivers, enables, and empowers care services
                         that span every state in a person&#039;s health journey -from wellness and prevention to acute
                         care to complex healthcare needs. Our site uses proprietary health signals and personalized
                         interactions to drive better health outcomes across the full continuum of care.</p>
-                    <div class="choose-btn">
-                        <a href="https://script.viserlab.com/docrib/doctors-all" class="cmn-btn">Book Now</a>
-                    </div>
+
                 </div>
             </div>
-            <div class="col-lg-8 mrb-30">
-                <div class="choose-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="choose-right-content">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="right-column-one">
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//605f194c9393f1616845132.png"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title"><a
-                                                            href="https://script.viserlab.com/docrib/doctors-all/sector/8">Hematologist</a>
-                                                    </h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
-                                                        vel.</p>
-                                                </div>
-                                            </div>
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//604a0077b1b341615462519.png"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title"><a
-                                                            href="https://script.viserlab.com/docrib/doctors-all/sector/7">Ophthalmology</a>
-                                                    </h6>
-                                                    <p>Ophthalmology is a branch of medicine and surgery that deals with
-                                                        the diagnosis and treatment of disorders of the eye.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="right-column-two">
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//604a010ab280d1615462666.jpg"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title">Dental</h6>
-                                                    <p>Dentistry, also known as dental medicine and oral medicine, is a
-                                                        branch of medicine that consists of oral problems.</p>
-                                                </div>
-                                            </div>
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//5fc4934a5f47d1606718282.png"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title">ENT</h6>
-                                                    <p>This sector is a surgical subspecialty within medicine that deals
-                                                        with the surgical and medical terms of conditions of the head
-                                                        and neck.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="choose-right-content">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="right-column-one">
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//5fc493e08dd861606718432.png"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title"><a
-                                                            href="https://script.viserlab.com/docrib/doctors-all/sector/4">Oncology</a>
-                                                    </h6>
-                                                    <p>Oncology is a branch of medicine that deals with the prevention,
-                                                        diagnosis, and treatment of cancer.</p>
-                                                </div>
-                                            </div>
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//5fc493cab8f8c1606718410.png"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title"><a
-                                                            href="https://script.viserlab.com/docrib/doctors-all/sector/3">Neurology</a>
-                                                    </h6>
-                                                    <p>Neurology is a branch of medicine dealing with disorders of the
-                                                        nervous system.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="right-column-two">
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//5fc493afb11a91606718383.png"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title">Cardiology</h6>
-                                                    <p>Cardiology is a branch of medicine that deals with disorders of
-                                                        the heart as well as some parts of the circulatory system.</p>
-                                                </div>
-                                            </div>
-                                            <div class="choose-item">
-                                                <div class="choose-thumb">
-                                                    <img src="https://script.viserlab.com/docrib/assets/sector//604a02b8abd041615463096.jpg"
-                                                        alt="choose">
-                                                </div>
-                                                <div class="choose-content">
-                                                    <h6 class="title">Gynecology</h6>
-                                                    <p>Gynecology or gynecology is the medical practice dealing with the
-                                                        health of the female reproductive system.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
+
         </div>
     </div>
-</section> --}}
+</section>
 <!-- choose-section end -->
 <!-- our doctor section start -->
 {{-- <section class="booking-section ptb-80">

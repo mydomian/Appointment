@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Mentor;
 use App\Appointment;
 use App\Http\Controllers\Controller;
 use App\Mentor;
+use App\bd_location;
+use App\category;
 use App\PaymentSystem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,17 +38,18 @@ class MentorController extends Controller
 
     //Registration
     public function Registration(){
-        return view('mentor.registration');
+
+        $district_location = bd_location::where(['type'=> 1,'parent_id' => null])->orderBy('id','ASC')->get();
+        $category = Category::orderBy('id','ASC')->get();
+        // $upazila_location = bd_location::where(['type'=> 2,'parent_id' => null])->orderBy('id','ASC')->get();
+        // dd($category);
+        return view('mentor.registration',compact('district_location','category'));
     }
 
     //RegistrationStore
     public function RegistrationStore(Request $request){
 
-        // return $request->all();
-
-        $spacialist = json_encode($request['spacialist']);
-        $available_day = json_encode($request['available_day']);
-
+        $specialist = $request->specialist[0];
 
         //document insert
         if($request->file('document')){
@@ -70,16 +73,19 @@ class MentorController extends Controller
         }
 
         $mentor = new Mentor;
-        $mentor->name = $request['name'];
+        $mentor->full_name = $request['full_name'];
         $mentor->phone = $request['phone'];
         $mentor->email = $request['email'];
         $mentor->address = $request['address'];
-        $mentor->category = $request['category'];
-        $mentor->spacialist = $spacialist;
-        $mentor->expirenced = $request['expirenced'];
+        $mentor->district_id = $request['district_id'];
+        $mentor->thana_id = $request['thana_id'];
+        $mentor->category_id = $request['category_id'];
+        $mentor->specialist = $specialist;
+        $mentor->time_limit = $request['time_limit'];
+        $mentor->fee = $request['fee'];
+        $mentor->time_limit = $request['time_limit'];
         $mentor->documents = $filename;
         $mentor->image = $filename2;
-        $mentor->available_day = $available_day;
         $mentor->password = Hash::make($request['password']);
         $mentor->save();
         return redirect('/mentor');
@@ -186,8 +192,24 @@ class MentorController extends Controller
             return redirect()->back();
         }
 
+    }
 
+    public function getThana(Request $request){
 
+        $getThana = bd_location::where(['parent_id'=> $request->id,'type'=>2])->get();
+       if($getThana){
+        return response()->json([
+            'status' => 'success',
+            'msg' => 'successfully data found',
+            'data' => $getThana,
+        ]);
+       }else{
+        return response()->json([
+            'status' => 'error',
+            'msg' => 'data not found',
+            'data' => "",
+        ]);
+       }
 
     }
 

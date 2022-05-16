@@ -11,7 +11,19 @@ class Mentor extends Authenticatable
 
     protected $guard = 'mentor';
     protected $fillable = [
-        'name', 'email', 'password',
+        'full_name',
+        'email',
+        'phone',
+        'address',
+        'status',
+        'district_id',
+        'thana_id',
+        'category_id',
+        'specialist',
+        'time_limit',
+        'fee',
+        'image',
+        'password',
     ];
 
     protected $hidden = [
