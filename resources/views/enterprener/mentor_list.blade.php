@@ -4,18 +4,18 @@
 
         <!-- banner-section start -->
         <section class="inner-banner-section bg-overlay-white banner-section bg_img"
-            data-background="https://script.viserlab.com/docrib/assets/images/frontend/breadcrumb/5fd078f78945f1607497975.jpg">
+            data-background="{{ asset('assets/images/banner2.jpg') }}">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="banner-content">
-                            <h2 class="title">Our Doctors</h2>
+                            <h2 class="title">Our Mentors</h2>
                             <div class="breadcrumb-area">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="https://script.viserlab.com/docrib">Home</a>
+                                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a>
                                         </li>
-                                        <li class="breadcrumb-item active" aria-current="page">Our Doctors</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Our Mentors</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -34,7 +34,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-12 text-center">
                             <div class="appoint-content">
-                                <form class="appoint-form mt-0 ml-b-20"
+                                {{-- <form class="appoint-form mt-0 ml-b-20"
                                     action="#" method="get">
                                     <input type="hidden" name="_token" value="8ukAIkzAblPKHWeFleQaZmEKzBYgrU7bcvLdSXCC">
 
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="search-btn cmn-btn"><i class="icon-search"></i></button>
-                                </form>
+                                </form> --}}
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 mrb-30">
                             <div class="booking-item">
                                 <div class="booking-thumb">
-                                    <img src="{{ asset('assets/images/doctorDemo.jpg') }}"
+                                    <img src="{{ asset('images/mentor/photos/'.$list->image) }}"
                                         alt="booking">
                                     <div class="doc-deg">{{$list->category}}</div>
                                     <a href="#0" class="fav-btn"><i class="far fa-bookmark"></i></a>
@@ -91,12 +91,12 @@
                                     </div>
                                     <ul class="booking-list">
                                         <li><i class="icon-direction-alt"></i><a
-                                                href="https://script.viserlab.com/docrib/doctors-all/location/3">{{$list->address}}</a></li>
+                                                href="#">{{$list->address}}</a></li>
                                         <li><i class="las la-phone"></i> {{$list->phone}}</li>
                                         <li><i class="las la-phone"></i> {{$list->available_day}}</li>
                                     </ul>
                                     <div class="booking-btn">
-                                        <a href="{{ url("mentor/".$list->id) }}" class="cmn-btn">Select Mentor</a>
+                                        <a href="{{ url("user/mentor/".$list->id) }}" class="cmn-btn">Select Mentor</a>
                                     </div>
                                 </div>
                             </div>

@@ -12,7 +12,7 @@
         <div class="col-xl-12 col-lg-12 col-md-12 mrb-30">
             <div class="team-item d-flex flex-wrap align-items-center justify-content-between">
                 <div class="team-thumb">
-                    <img src="{{ asset('assets/images/user/'.$profile_info->image) }}"
+                    <img class="img img-fluid" src="{{ asset('assets/images/user/'.$profile_info->image) }}"
                         alt="doctor-image">
                     <div class="team-thumb-overlay">
                         <ul class="social-icon">
@@ -33,9 +33,10 @@
                     <h6 class="title">Address</h6>
                     <p>{{ $profile_info->address }}</p>
 
-
                     @if(!is_null($appointment))
                        <h4> Appointment To : {{$mentor_info->name}}</h2>
+                        <br>
+                        <h5>Comunicate:  {{ $appointment->details }}</h5>
                         <br>
                        <h4> Fee : {{$mentor_info->fee}}</h3>
                     @endif
