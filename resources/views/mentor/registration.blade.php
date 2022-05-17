@@ -113,7 +113,9 @@
             <a href="{{url('/admin/login')}}">Mentor</a>
           </div>
           <!-- /.login-logo -->
-
+          @if ($errors->has('error'))
+            <span class="error text-danger">{{ $errors->first('error') }}</span>
+         @endif
 
           <div class="card card-warning">
             <div class="card-header">
